@@ -15,11 +15,11 @@ public class Schedule {
     @Scheduled(cron = "0/10 * * * * *")
     public void timer1(){
         LocalDateTime localDateTime = LocalDateTime.now();
-        logger.info("当前时间:-10秒执行一次"+localDateTime.format(DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss")));
+        logger.info("当前时间:-10秒执行一次:"+localDateTime.format(DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss")));
     }
     @Scheduled(cron = "0/2 * * * * *")
     public void timer2(){
         LocalDateTime localDateTime = LocalDateTime.now();
-        logger.info("当前时间: -两秒执行一次"+localDateTime.format(DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss")));
+        logger.info("当前时间: -两秒执行一次:"+localDateTime.format(DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss")));
     }
 }
