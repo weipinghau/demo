@@ -1,6 +1,7 @@
 package com.example.demo;
 
 import com.example.demo.bean.Person;
+import com.example.demo.demoUtil.DemoUtil;
 import com.example.demo.model.UserDomain;
 import com.example.demo.service.impl.UserServiceImpl;
 import org.junit.Test;
@@ -11,6 +12,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.scheduling.annotation.EnableScheduling;
 import org.springframework.test.context.junit4.SpringRunner;
+
+import java.util.Date;
 
 @RunWith(SpringRunner.class)
 @SpringBootTest
@@ -27,7 +30,9 @@ public class DemoApplicationTests {
     public void contextLoads() {
         logger2.info(""+person);
         logger2.info(""+user);
-
+        System.out.println("date2String:: "+DemoUtil.date2String(new Date(),"YYYY-MM-dd"));
+        System.out.println("string2Date:: "+DemoUtil.string2Date("2018-12-20","yyyy-MM-dd"));
+        System.out.println((DemoUtil.string2Date("20181220","YYYYMMdd"))instanceof Date);
     }
     //记录器
     Logger logger = LoggerFactory.getLogger(getClass());
