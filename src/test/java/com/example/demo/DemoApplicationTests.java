@@ -1,6 +1,8 @@
 package com.example.demo;
 
+import com.alibaba.druid.sql.visitor.functions.Concat;
 import com.example.demo.bean.Person;
+import com.example.demo.constants.Constants;
 import com.example.demo.demoUtil.DemoUtil;
 import com.example.demo.model.UserDomain;
 import com.example.demo.service.impl.UserServiceImpl;
@@ -53,6 +55,11 @@ public class DemoApplicationTests {
         logger.info(str);
         logger.info("%d{yyyy‐MM‐dd HH:mm:ss.SSS} [%thread] %‐5level %logger{50} ‐ %msg%n");
 
+
+    }
+    @Test
+    public void test2(){
+        System.out.println(Constants.CON_STR);
 
     }
 
